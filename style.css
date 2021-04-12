@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#wrapperAll {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  background-color: rgb(31, 33, 35);
+  color: rgb(209, 205, 199);
+  overflow-x: hidden;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+#wrapperAll {
+  display: grid;
+
+  grid-template-columns: minmax(170px, 270px) 1fr;
+  grid-template-rows: 170px 1fr;
+  grid-template-areas:
+    "nav header"
+    "nav main";
+}
+:root {
+  --background-color-dark: rgb(24, 26, 27);
+}
+
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+
+/* header settings */
+header {
+  background-color: var(--background-color-dark);
+  color: rgb(232, 230, 227);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 65px 0px;
+  margin-bottom: 40px;
+}
+
+#searchBar {
+  margin-left: 40px;
+  flex-basis: 383px;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  border: rgb(23, 46, 83) solid 1px;
+  background-color: rgb(31, 33, 35);
+  flex-shrink: 1;
+}
+#searchBar i {
+  width: 36px;
+  height: 36px;
+}
+#searchBar span {
+  margin-left: 40px;
+  margin-right: 31px;
+}
+#search {
+  width: 360px;
+  height: 52px;
+  border-radius: 30px;
+  background-color: rgb(31, 33, 35);
+  color: rgb(232, 230, 227);
+  border: none;
+  font-size: 14px;
+}
+#iconBar {
+  display: flex;
+  width: 260px;
+  height: 70px;
+  justify-content: end;
+  gap: 45px;
+  align-items: center;
+}
+#iconBar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50px;
+}
+
+main {
+  padding: 25px;
+  padding-top: 0px;
+}
+#cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(24, 26, 27);
+  height: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.numbers {
+  font-size: 3.2rem;
+  color: rgb(159, 187, 211);
+}
+.contentOfCard {
+  display: flex;
+  flex-direction: column;
+}
+
+#survey {
+  margin-top: 1.7em;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+  padding: 1.6em;
+}
+.number {
+  font-size: 34px;
+  color: rgb(159, 187, 211);
+}
+.surveyTitle {
+  font-size: 24px;
+  margin-bottom: 1.2em;
+  border-bottom: 1px rgb(53, 57, 59) solid;
+  padding-bottom: 1em;
+}
+.surveyNumbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* margin-bottom: 1em; */
+}
+.numbersAndInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.surveyGraph img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#patientAndData {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "patients totalR"
+    "patients totalD";
+  margin-top: 1.7em;
+  gap: 25px;
+}
+
+.patients {
+  grid-area: patients;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+  padding: 25px;
+}
+.totalRecoveryReport {
+  grid-area: totalR;
+}
+.totalDeathReport {
+  grid-area: totalD;
+}
+
+#patientsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.headRow {
+  background-color: rgb(36, 136, 147);
+  height: 50px;
+  font-size: 12px;
+}
+.roundLeft {
+  border-color: rgb(36, 136, 147);
+  border-radius: 30px 0px 0px 30px;
+}
+.roundRight {
+  border-color: rgb(36, 136, 147);
+  border-radius: 0px 30px 30px 0px;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+.responsive {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+}
+.responsive img {
+  width: 100%;
+}
+.title {
+  padding: 20px;
+  font-size: 24px;
+  border-bottom: 1px rgb(63, 70, 77) solid;
+  width: 90%;
+  align-self: center;
+  color: rgb(159, 187, 211);
+}
+
+#staff {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 26, 27);
+  margin-top: 1.7rem;
+  border-radius: 10px;
+  align-items: center;
+}
+.staffHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px rgb(63, 70, 77) solid;
+  width: 95%;
+}
+.staffHead div {
+  padding: 15px;
+  font-size: 24px;
+  color: rgb(159, 187, 211);
+}
+.iconsStaff {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.iconsStaff i {
+  background-color: rgb(31, 33, 35);
+  padding: 6px 15px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1420px) {
+  #cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "1 2"
+      "3 4";
+    justify-content: space-evenly;
+  }
+  .card {
+    max-width: 100%;
+    width: 100%;
+    min-width: none;
+  }
+}
+
+@media only screen and (max-width: 1123px) {
+  #patientAndData {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #wrapperAll {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+  .hamburgerIcon {
+    display: block;
+    padding: 0px 10px;
+  }
+  header {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  #searchBar {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    padding-left: 10px;
+  }
+
+  header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+
+  #patientAndData {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  main {
+    padding: 0px;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+  }
+
+  .surveyTitle {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .surveyNumbers {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  header div span {
+    font-size: 28px !important;
+  }
+
+  #iconBar {
+    gap: 25px;
+  }
+}
