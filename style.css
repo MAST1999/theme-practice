@@ -185,6 +185,10 @@ main {
   grid-area: totalD;
 }
 
+table {
+  height: 100%;
+}
+
 #patientsTable {
   border-collapse: collapse;
   width: 100%;
@@ -252,12 +256,144 @@ th {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 .iconsStaff i {
   background-color: rgb(31, 33, 35);
   padding: 6px 15px;
   border-radius: 10px;
+}
+
+.staffCards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  gap: 25px;
+  padding: 25px;
+  padding-bottom: 35px;
+}
+.staffCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 310px;
+  width: 240px;
+  padding: 50px 0px;
+  box-shadow: rgba(10, 65, 153, 0.15) 0px 7px 15px;
+}
+.staffCard span img {
+  width: 118px;
+  height: 118px;
+  border-radius: 80px;
+}
+
+#activities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 25px 0px;
+  gap: 25px;
+}
+.recentActivities {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+}
+.headRA {
+  padding: 20px;
+  font-size: 24px;
+  border-bottom: 1px rgb(63, 70, 77) solid;
+  width: 90%;
+  align-self: center;
+  color: rgb(159, 187, 211);
+}
+.recentActivitiesPercent {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.rActivity {
+  list-style-type: disc;
+
+  margin: 0px 40px;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(24, 26, 27);
+  border-radius: 10px;
+  width: 90%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0px;
+  padding-left: 25px;
+  gap: 10px;
+  background-color: rgb(24, 26, 27);
+  width: 100%;
+  height: 100vh;
+}
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-size: 32px;
+  margin: 30px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+.fa-plus,
+.navHeader {
+  color: rgb(36, 136, 147);
+}
+.bottomul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  padding: 0px;
+}
+.topul li {
+  color: rgb(36, 136, 147);
+  font-size: 1.3em;
+  padding: 0px;
+  margin: 0px;
+}
+.bottomul li {
+  color: rgb(209, 205, 199);
 }
 
 @media only screen and (max-width: 1420px) {
@@ -284,6 +420,34 @@ th {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  #activities {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .staffCards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #c1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .staffCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #c2 {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   #wrapperAll {
     grid-template-columns: 1fr;
@@ -297,6 +461,12 @@ th {
   }
   header {
     width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  #c3 {
+    display: none;
   }
 }
 
@@ -326,7 +496,22 @@ th {
   }
 }
 
+@media only screen and (max-width: 682px) {
+  nav {
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #c4 {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 580px) {
+  body,
+  html {
+    height: 100vh;
+  }
   main {
     padding: 0px;
   }
